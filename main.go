@@ -7,14 +7,9 @@ import (
 	"github.com/d2r2/go-dht"
 )
 
-type (
-	// or centigrade
-	Celsius    float32
-	Kelvin     float32
-	Fahrenheit float32
-)
-
 func Celsius2Fahrenheit(c float32) float32 {
+	// Take a float32 value (representing celcuis) and do the math to convert
+	// to fahrenheit.
 	return float32(c*9/5 + 32)
 }
 
