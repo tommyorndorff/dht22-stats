@@ -7,6 +7,17 @@ import (
 	"github.com/d2r2/go-dht"
 )
 
+type (
+	// or centigrade
+	Celsius    float32
+	Kelvin     float32
+	Fahrenheit float32
+)
+
+func Celsius2Fahrenheit(c Celsius) Fahrenheit {
+	return Fahrenheit(c*9/5 + 32)
+}
+
 func main() {
 	// Read DHT11 sensor data from pin 4, retrying 10 times in case of failure.
 	// You may enable "boost GPIO performance" parameter, if your device is old
@@ -23,4 +34,6 @@ func main() {
 	// Print temperature and humidity
 	fmt.Printf("Temperature = %v*C, Humidity = %v%% (retried %d times)\n",
 		temperature, humidity, retried)
+	fmt.Printf("Temperature = %v*C, Humidity = %v%% (retried %d times)\n",
+		Celsius2Fahrenheit(temperature), humidity, retried)
 }
