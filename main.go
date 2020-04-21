@@ -34,6 +34,6 @@ func main() {
 	// Print temperature and humidity
 	fmt.Printf("Temperature = %v*C, Humidity = %v%% (retried %d times)\n",
 		temperature, humidity, retried)
-	fmt.Printf("Temperature = %v*C, Humidity = %v%% (retried %d times)\n",
+	fmt.Printf("Temperature = %v*F, Humidity = %v%% (retried %d times)\n",
 		Celsius2Fahrenheit(temperature), humidity, retried)
 }
