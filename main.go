@@ -14,8 +14,8 @@ type (
 	Fahrenheit float32
 )
 
-func Celsius2Fahrenheit(c Celsius) Fahrenheit {
-	return Fahrenheit(c*9/5 + 32)
+func Celsius2Fahrenheit(c float32) float32 {
+	return float32(c*9/5 + 32)
 }
 
 func main() {
